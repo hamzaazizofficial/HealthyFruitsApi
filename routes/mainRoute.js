@@ -32,7 +32,7 @@ mainRouter.get('/services', (req, res) => {
 
 /* API Routes start */
 
-mainRouter.get('/api/allItems', (req, res) => {
+mainRouter.get('/api/all', (req, res) => {
     const { category, search } = req.query;
     
     console.log("Category:", category);
@@ -61,7 +61,7 @@ mainRouter.get('/api/allItems', (req, res) => {
     res.json(filteredAllItems);
 });
 
-mainRouter.get('/api/allItems/random', (req, res) => {
+mainRouter.get('/api/all/random', (req, res) => {
     res.json(allItems[Math.floor(Math.random() * allItems.length)]);
 });
 
