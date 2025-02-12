@@ -2,13 +2,6 @@ import express from "express";
 import fruits from "../data/fruits.js";
 import vegetables from "../data/vegetables.js";
 import allItems from "../data/allItems.js";
-// import path from "path";
-// import { fileURLToPath } from "url";
-
-// // Get __dirname equivalent for ES Modules
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
 
 const mainRouter = express.Router();
 
@@ -17,16 +10,6 @@ mainRouter.get('/', (req, res) => {
     res.render("index", {
         title: "My Home Page",
     });
-    // res.json(
-    //         [
-    //             { message: 'Welcome to HealthyFruitsApi. Here is the basic documentation for you' },
-    //             { for_all_fruits: 'hit /api/allFruits' },
-    //             { for_random_fruit: 'hit /api/randomSingleFruit' },
-    //             { for_sugar_patient_friendly_fruits: 'hit /api/sugarFriendlyFruits' },
-    //             { for_bp_patient_friendly_fruits: 'hit /api/bpFriendlyFruits' },
-    //             { for_uric_acid_patient_friendly_fruits: 'hit /api/uricAcidFriendlyFruits' },
-    //         ]
-    //     );
 });
 
 mainRouter.get('/documentation', (req, res) => {
