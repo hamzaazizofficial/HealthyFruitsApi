@@ -9,6 +9,11 @@ import allItems from "../data/allItems.js";
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const mainRouter = express.Router();
 
 mainRouter.get('/', (req, res) => {
